@@ -7,16 +7,15 @@ window.addEventListener("load", function() {
    let copilot = document.querySelector("input[name=copilotName]");
    let fuelLevel = document.querySelector("input[name=fuelLevel]");
    let cargoMass = document.querySelector("input[name=cargoMass]");
-   let form = document.getElementById("formSubmit");
+   let form = document.getElementById("launchForm");
    list.style.visibility = "hidden";
-   
-
+ 
 
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
  let listedPlanetsResponse = myFetch();
    listedPlanetsResponse.then(function (json) {
        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-        let pickedPlanet = json.pickPlanet(json);
+        let pickedPlanet = json[pickPlanet(json)];
         console.log(pickedPlanet);
         let name = pickedPlanet.name;
         let diameter = pickedPlanet.diameter;
@@ -31,8 +30,9 @@ window.addEventListener("load", function() {
    //get the DOM not for 'faulty-items' to pass into formSubmission
    //set visiibility of this DOM not to 'hidden'
    //set up submit handler for formSubmission
-   form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function(event) {
     formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass);
     event.preventDefault();
 });
+
 });

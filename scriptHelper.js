@@ -27,7 +27,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                     <li>Distance from Earth: ${distance}</li>
                     <li>Number of Moons: ${moons}</li>
                 </ol>
-                <img src="${imageUrl}">`
+                <img src="${imageUrl}">`;
 }
 //validates input data
 function validateInput(testInput) {
@@ -47,14 +47,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     let fuelCheck = false;
     let cargoCheck = false;
     
-   /*let emptyCheck = [pilot, copilot, fuelLevel, cargoMass];
+   let emptyCheck = [pilot, copilot, fuelLevel, cargoMass];
     for (let i=0; i<emptyCheck.length; i++) {
         if (validateInput(emptyCheck[i].value) === "Empty") {
             alert("All fields are required");
             event.preventDefault();
             break;
         }
-    }*/
+    }
 
     if (validateInput(pilot.value) === "Not a Number") {
         document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot.value} is ready for launch`;
@@ -124,8 +124,7 @@ async function myFetch() {
 
 function pickPlanet(planets) {
     //planets is an array of planets. pick random planet
-    let index = Math.floor(Math.random()*planets.length);
-    return index;
+    return Math.floor(Math.random()*planets.length);
 }
 
 try {
