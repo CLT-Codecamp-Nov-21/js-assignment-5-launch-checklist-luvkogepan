@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
  let listedPlanetsResponse = myFetch();
    listedPlanetsResponse.then(function (json) {
        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-        let pickedPlanet = json[pickPlanet(json)];
+        let pickedPlanet = json.pickPlanet(json);
         console.log(pickedPlanet);
         let name = pickedPlanet.name;
         let diameter = pickedPlanet.diameter;
