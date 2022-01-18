@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
    let fuelLevel = document.querySelector("input[name=fuelLevel]");
    let cargoMass = document.querySelector("input[name=cargoMass]");
    let form = document.getElementById("formSubmit");
-   
+   list.style.visibility = "hidden";
    
 
 
