@@ -47,14 +47,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     let fuelCheck = false;
     let cargoCheck = false;
     
-   /*let emptyCheck = [pilot, copilot, fuelLevel, cargoMass];
+   let emptyCheck = [pilot, copilot, fuelLevel, cargoMass];
     for (let i=0; i<emptyCheck.length; i++) {
         if (validateInput(emptyCheck[i].value) === "Empty") {
             alert("All fields are required");
             event.preventDefault();
             break;
         }
-    }*/
+    }
 //git issue
     if (validateInput(pilot.value) === "Not a Number") {
         document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot.value} is ready for launch`;
