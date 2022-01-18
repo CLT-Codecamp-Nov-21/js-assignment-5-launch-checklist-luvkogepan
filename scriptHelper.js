@@ -72,6 +72,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     
     if (validateInput(fuelLevel.value) === "Is a Number") {
         if (fuelLevel.value < 10000) {
+            alert("Fuel is too low");
             document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`;
         } if (fuelLevel.value >= 10000) {
             fuelCheck = true;
@@ -84,6 +85,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         if (cargoMass.value < 10000 && cargoMass.value >=0) {
             cargoCheck = true;
         } if (cargoMass.value >= 10000) {
+            alert("Cargo is too heavy");
             document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`;
         } 
     } else {
