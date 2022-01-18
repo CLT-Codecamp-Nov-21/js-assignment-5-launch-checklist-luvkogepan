@@ -77,9 +77,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         } if (fuelLevel.value >= 10000) {
             fuelCheck = true;
         }
-    } else {
-        alert("Input valid fuel level.");
-    }
+    } //else {
+       // alert("Input valid fuel level.");
+    //}
     
     if (validateInput(cargoMass.value) === "Is a Number") {
         if (cargoMass.value < 10000 && cargoMass.value >=0) {
@@ -88,9 +88,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
             alert("Cargo is too heavy");
             document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`;
         } 
-    } else {
-        alert("Input valid cargo mass.");
-    }
+    } //else {
+      //  alert("Input valid cargo mass.");
+    //}
     
     
     let itemCheck = [pilotCheck, copilotCheck, fuelCheck, cargoCheck];
